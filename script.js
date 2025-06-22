@@ -1,9 +1,18 @@
 function sumAll(arr) {
-  const totalNumbers = arr[1] - arr[0];
-  let sum = 0;
-  for (let i = 0; i < totalNumbers; i++) {
-    sum += arr[0] + arr[i];
+  let totalNumbers = 0;
+  let start;
+  if (arr[0] > arr[1]) {
+    totalNumbers = arr[0] - arr[1];
+    start = arr[1];
+  } else {
+    totalNumbers = arr[1] - arr[0];
+    start = arr[0];
+  }
+  let sum = start;
+  for (let i = 1; i <= totalNumbers; i++) {
+    start++;
+    sum += start;
   }
   return sum;
 }
-console.log(sumAll([1, 3]));
+console.log(sumAll([5, 10]));
