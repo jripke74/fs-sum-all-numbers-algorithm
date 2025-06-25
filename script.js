@@ -15,4 +15,4 @@ function sumAll(arr) {
   }
   return sum;
 }
-console.log(sumAll([5, 10]));
+console.log(sumAll([5, 10])); // 45
